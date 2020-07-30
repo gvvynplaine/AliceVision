@@ -28,7 +28,7 @@ class MaxFlow_AdjList
 {
 public:
     using NodeType = int;
-    using ValueType = float;
+    using ValueType = double;
 
     using Traits = boost::adjacency_list_traits<
                 boost::vecS,  // OutEdgeListS
@@ -112,8 +112,8 @@ public:
 
     inline ValueType compute()
     {
-        printStats();
-        ALICEVISION_LOG_INFO("Compute boykov_kolmogorov_max_flow.");
+        //printStats();
+        //ALICEVISION_LOG_INFO("Compute boykov_kolmogorov_max_flow.");
 
         vertex_size_type nbVertices(boost::num_vertices(_graph));
         _color.resize(nbVertices, boost::white_color);
@@ -131,7 +131,7 @@ public:
             _S, _T
             );
 
-        printColorStats();
+        //printColorStats();
 
         return v;
     }
