@@ -28,7 +28,7 @@ class MaxFlow_AdjList
 {
 public:
     using NodeType = int;
-    using ValueType = double;
+    using ValueType = float;
 
     using Traits = boost::adjacency_list_traits<
                 boost::vecS,  // OutEdgeListS
